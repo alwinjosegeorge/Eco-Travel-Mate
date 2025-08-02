@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (calcBtn) {
     calcBtn.addEventListener('click', () => {
       const distance = parseFloat(document.getElementById('distance').value);
-      const emissionFactor = 0.21; // kg CO2 per km (Car)
+      const emissionFactor = 0.21; // kg CO2 per km
       if (!isNaN(distance) && distance > 0) {
         const totalEmissions = (distance * emissionFactor).toFixed(2);
         document.querySelector('.impact-main .value').textContent = `${totalEmissions} kg`;
@@ -30,21 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 🗺️ Mapbox Token Button
+  // 🗺️ Mapbox Token Check
   const mapBtn = document.querySelector('.map-section .btn-primary');
   if (mapBtn) {
     mapBtn.addEventListener('click', () => {
       const token = document.querySelector('.map-widget input').value.trim();
       if (token) {
         alert(`Map would load using token: ${token}`);
-        // Here you could initialize Mapbox
+        // TODO: Add Mapbox map here later
       } else {
         alert('Please enter your Mapbox token.');
       }
     });
   }
 
-  // 🤖 AI Chat
+  // 🤖 AI Chat Logic
   const sendBtn = document.querySelector('.send-btn');
   if (sendBtn) {
     sendBtn.addEventListener('click', () => {
@@ -53,17 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (value) {
         const chatBox = document.querySelector('.chat-box');
 
-        // User message
         const userMessage = document.createElement('div');
         userMessage.className = 'chat-message user';
         userMessage.innerHTML = `<p>${value}</p>`;
         chatBox.appendChild(userMessage);
 
-        // Simulated bot response
         setTimeout(() => {
           const botMessage = document.createElement('div');
           botMessage.className = 'chat-message bot';
-          botMessage.innerHTML = `<p>Thanks for your message: "${value}". I'm here to help with eco-friendly tips and data!</p>`;
+          botMessage.innerHTML = `<p>Thanks for your message: "${value}". I'm here to help with eco tips and AQI info!</p>`;
           chatBox.appendChild(botMessage);
           chatBox.scrollTop = chatBox.scrollHeight;
         }, 800);
@@ -73,16 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 🌟 Suggested Prompts Fill
+  // 🌟 Suggested Prompt Fill
   document.querySelectorAll('.suggested-prompts button').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelector('.input-area input').value = btn.textContent;
     });
   });
 
-  // 📍 Geolocation on Button Click
+  // 📍 Location + Live AQI Fetch
   const locationBtn = document.getElementById('get-location');
   const locationText = document.getElementById('user-location');
+  const aqiValue = document.querySelector('.aqi-value');
+  const aqiStatus = document.querySelector('.aqi-status');
+  const progressBar = document.querySelector('.progress');
+
+  const API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // 🔑 Replace with your real API key
 
   if (locationBtn && locationText) {
     locationBtn.addEventListener('click', () => {
@@ -92,15 +95,44 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             const { latitude, longitude } = position.coords;
-            locationText.textContent = `📍 Your Location: ${latitude.toFixed(4)}, ${longitude.toFixed(4)}`;
+            locationText.textContent = `📍 Lat: ${latitude.toFixed(4)}, Lon: ${longitude.toFixed(4)}`;
+
+            // 🔄 Fetch AQI from OpenWeather
+            fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
+              .then(res => res.json())
+              .then(data => {
+                const aqi = data.list[0].main.aqi;
+
+                const aqiMap = {
+                  1: { label: 'Good', color: '#4CAF50' },
+                  2: { label: 'Fair', color: '#8BC34A' },
+                  3: { label: 'Moderate', color: '#FFC107' },
+                  4: { label: 'Poor', color: '#FF5722' },
+                  5: { label: 'Very Poor', color: '#F44336' },
+                };
+
+                const info = aqiMap[aqi];
+                aqiValue.textContent = aqi * 50; // approx AQI value
+                aqiValue.style.color = info.color;
+                aqiStatus.textContent = info.label;
+                aqiStatus.style.backgroundColor = info.color;
+                progressBar.style.width = `${aqi * 20}%`;
+                progressBar.style.backgroundColor = info.color;
+              })
+              .catch(err => {
+                console.error('AQI fetch error:', err);
+                aqiValue.textContent = '??';
+                aqiStatus.textContent = 'Unavailable';
+                progressBar.style.width = '0';
+              });
+
           },
           (error) => {
             locationText.textContent = '❌ Location access denied.';
-            console.warn('Geolocation error:', error.message);
           }
         );
       } else {
-        locationText.textContent = '❌ Geolocation not supported by your browser.';
+        locationText.textContent = '❌ Geolocation not supported.';
       }
     });
   }
