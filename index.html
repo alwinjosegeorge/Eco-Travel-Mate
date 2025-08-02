@@ -2,159 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GreenPath - Eco Travel Mate</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenPath – Eco Travel Mate</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav>
       <div class="logo">🌿 GreenPath</div>
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#air-quality">Air Quality</a></li>
-        <li><a href="#carbon-calculator">Carbon Calculator</a></li>
+        <li><a href="#calculator">Carbon Calculator</a></li>
         <li><a href="#map">Map</a></li>
-        <li><a href="#ai-assistant">AI Assistant</a></li>
+        <li><a href="#chat">AI Assistant</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero-section">
-      <div class="hero-content">
-        <h1>GreenPath</h1>
-        <p>Your intelligent eco-travel companion for greener journeys.</p>
-        <div class="hero-buttons">
-          <button class="btn btn-primary">Start Journey</button>
-          <button class="btn btn-secondary">Learn More</button>
-        </div>
+  <section id="home" class="hero-section">
+    <h1>Eco Travel Mate</h1>
+    <p>Your companion for greener, smarter travel.</p>
+  </section>
+
+  <section id="air-quality" class="aqi-section">
+    <h2>Air Quality Index</h2>
+    <p id="user-location">📍 Current Location</p>
+    <div class="aqi-display">
+      <div class="aqi-main">
+        <div class="aqi-value">??</div>
+        <div class="aqi-status">Unavailable</div>
+        <div class="progress-bar"><div class="progress"></div></div>
       </div>
-    </section>
-
-    <!-- AI ASSISTANT -->
-    <section id="ai-assistant" class="ai-assistant-section">
-      <h2>AI Environmental Assistant</h2>
-      <p>Personalized insights for smarter, greener travel decisions.</p>
-      <div class="chat-container">
-        <div class="chat-header">
-          <span class="icon">💬</span>
-          <div class="chat-title">
-            <h3>GreenPath AI</h3>
-            <p>Eco Travel Assistant</p>
-          </div>
-        </div>
-        <div class="chat-box">
-          <div class="chat-message bot">
-            <p>Hello! Ask me about air quality, carbon emissions, or eco tips.</p>
-          </div>
-        </div>
-        <div class="chat-input">
-          <div class="suggested-prompts">
-            <button>When should I leave?</button>
-            <button>Check air quality</button>
-            <button>Carbon footprint tips</button>
-          </div>
-          <div class="input-area">
-            <input type="text" placeholder="Ask something..." />
-            <button class="send-btn">→</button>
-          </div>
-        </div>
+      <div class="aqi-details">
+        <div class="detail-row"><span>PM2.5</span><span>15 µg/m³</span></div>
+        <div class="detail-row"><span>PM10</span><span>28 µg/m³</span></div>
+        <div class="detail-row"><span>Humidity</span><span>65%</span></div>
+        <div class="detail-row"><span>Temperature</span><span>22°C</span></div>
       </div>
-    </section>
-
-   <section id="air-quality" class="air-quality-section">
-  <h2>Air Quality Monitor</h2>
-  <p>Plan your travel with real-time environmental data.</p>
-
-  <!-- Location Button & Output -->
-  <button id="get-location" class="btn btn-secondary">📍 Share My Location</button>
-  <p class="location" id="user-location">Waiting for location permission...</p>
-
-  <div class="air-quality-widget">
-    <div class="aqi-main">
-      <p>Air Quality Index</p>
-      <div class="aqi-value good">42</div>
-      <p class="aqi-status">Good</p>
-      <div class="progress-bar">
-        <div class="progress" style="width: 42%;"></div>
-      </div>
+      <button id="get-location">📍 Share My Location</button>
     </div>
+  </section>
 
-    <div class="aqi-details">
-      <div class="detail-item">
-        <p>PM2.5</p>
-        <p class="value">15 µg/m³</p>
-      </div>
-      <div class="detail-item">
-        <p>PM10</p>
-        <p class="value">28 µg/m³</p>
-      </div>
-      <div class="detail-item">
-        <p>Humidity</p>
-        <p class="value">65%</p>
-      </div>
-      <div class="detail-item">
-        <p>Temperature</p>
-        <p class="value">22°C</p>
-      </div>
+  <section id="calculator" class="carbon-calculator-section">
+    <h2>Carbon Footprint Calculator</h2>
+    <input type="number" id="distance" placeholder="Enter distance (km)" />
+    <button class="btn-primary">Calculate</button>
+    <div class="impact-main"><span class="value">--</span></div>
+    <div class="impact-details"></div>
+  </section>
+
+  <section id="map" class="map-section">
+    <h2>Interactive Map</h2>
+    <div class="map-widget">
+      <input type="text" placeholder="Enter your Mapbox token" />
+      <button class="btn-primary">Load Map</button>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="chat" class="chat-section">
+    <h2>AI Eco Assistant</h2>
+    <div class="chat-box"></div>
+    <div class="input-area">
+      <input type="text" placeholder="Ask me something..." />
+      <button class="send-btn">Send</button>
+    </div>
+    <div class="suggested-prompts">
+      <button>How to reduce emissions?</button>
+      <button>Today's AQI in my area</button>
+    </div>
+  </section>
 
-    <!-- CARBON CALCULATOR -->
-    <section id="carbon-calculator" class="carbon-calculator-section">
-      <h2>Carbon Footprint Calculator</h2>
-      <p>Estimate emissions based on your travel method and distance.</p>
-      <div class="calculator-widget">
-        <div class="form-group">
-          <label for="transport-method">Transport Method</label>
-          <select id="transport-method">
-            <option value="car">Car</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="distance">Distance (km)</label>
-          <input type="number" id="distance" value="1400"/>
-        </div>
-        <button class="btn btn-primary full-width">Calculate</button>
-      </div>
-      <div class="impact-widget">
-        <h3>Environmental Impact</h3>
-        <div class="impact-main">
-          <p class="value">294 kg</p>
-          <p class="label">CO₂ Emissions</p>
-        </div>
-        <div class="impact-details">
-          <div class="detail-item"><p>Distance</p><p>1400 km</p></div>
-          <div class="detail-item"><p>Emission Factor</p><p>0.21 kg/km</p></div>
-          <div class="detail-item"><p>To Offset</p><p>14 trees/year</p></div>
-        </div>
-        <div class="eco-tips">
-          <h4>Eco Tips</h4>
-          <ul>
-            <li>Use public transport</li>
-            <li>Offset carbon with tree planting</li>
-            <li>Combine multiple trips</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAP SECTION -->
-    <section id="map" class="map-section">
-      <h2>Environmental Map</h2>
-      <p>Explore global air quality with Mapbox integration.</p>
-      <div class="map-widget">
-        <div class="form-group">
-          <input type="text" placeholder="Enter your Mapbox token"/>
-        </div>
-        <button class="btn btn-primary">Save & Load Map</button>
-      </div>
-    </section>
-  </main>
+  <footer>
+    <p>© 2025 GreenPath. All rights reserved.</p>
+  </footer>
 
   <script src="javascript.js"></script>
 </body>
