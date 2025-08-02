@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPath - Eco Travel Mate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GreenPath</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#air-quality">Air Quality</a></li>
+                <li><a href="#carbon-calculator">Carbon Calculator</a></li>
+                <li><a href="#map">Environmental Map</a></li>
+                <li><a href="#ai-assistant">AI Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>GreenPath</h1>
+                <p>Your intelligent eco-travel companion. Track carbon footprint, monitor air quality, and get AI-powered insights for sustainable journeys.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Your Journey</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-assistant" class="ai-assistant-section">
+            <h2>AI Environmental Assistant</h2>
+            <p>Get personalized insights on air quality, travel timing, and eco-friendly recommendations</p>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <span class="icon">🌿</span>
+                    <div class="chat-title">
+                        <h3>GreenPath AI</h3>
+                        <p>Environmental Travel Assistant</p>
+                    </div>
+                </div>
+                <div class="chat-box">
+                    <div class="chat-message bot">
+                        <p>Hello! I'm your GreenPath AI assistant. I can help you with air quality insights, carbon footprint advice, and eco-friendly travel recommendations. What would you like to know?</p>
+                    </div>
+                    <div class="chat-message user">
+                        <p>how can i minimize the carbon emission</p>
+                    </div>
+                    <div class="chat-message bot">
+                        <p>I understand you're asking about environmental travel insights. Currently, I can help with air quality timing, carbon footprint calculation, pollution data, and eco-friendly recommendations. Could you be more specific about what you'd like to know?</p>
+                    </div>
+                     <div class="chat-message user">
+                        <p>air quality timing</p>
+                    </div>
+                    <div class="chat-message bot">
+                        <p>Current air quality is GOOD (AQI: 42). PM2.5 levels are at 15 µg/m³. It's safe for outdoor activities, but sensitive individuals should consider wearing masks during high-traffic hours.</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <div class="suggested-prompts">
+                        <button>When should I leave?</button>
+                        <button>Check air quality</button>
+                        <button>Carbon footprint tips</button>
+                    </div>
+                    <div class="input-area">
+                        <input type="text" placeholder="Ask about air quality, carbon footprint, or travel recommendations...">
+                        <button class="send-btn">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="air-quality" class="air-quality-section">
+            <h2>Air Quality Monitor</h2>
+            <p>Real-time air quality data to help you plan your travels and outdoor activities</p>
+            <div class="air-quality-widget">
+                <div class="aqi-main">
+                    <p>Air Quality Index</p>
+                    <div class="aqi-value good">42</div>
+                    <p class="aqi-status">Good</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 42%;"></div>
+                    </div>
+                    <p class="location">📍 Current Location</p>
+                </div>
+                <div class="aqi-details">
+                    <div class="detail-item">
+                        <p>PM2.5 <span class="subtext">Fine particles</span></p>
+                        <p class="value">15 <span class="unit">µg/m³</span></p>
+                    </div>
+                    <div class="detail-item">
+                        <p>PM10 <span class="subtext">Coarse particles</span></p>
+                        <p class="value">28 <span class="unit">µg/m³</span></p>
+                    </div>
+                    <div class="detail-item">
+                        <p>Humidity <span class="subtext">Moisture level</span></p>
+                        <p class="value">65%</p>
+                    </div>
+                    <div class="detail-item">
+                        <p>Temperature <span class="subtext">Current temp</span></p>
+                        <p class="value">22°C</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carbon-calculator" class="carbon-calculator-section">
+            <h2>Carbon Footprint Calculator</h2>
+            <p>Calculate the environmental impact of your travels and discover ways to offset your carbon footprint</p>
+            <div class="calculator-widget">
+                <h3>Trip Calculator</h3>
+                <div class="form-group">
+                    <label for="transport-method">Transportation Method</label>
+                    <select id="transport-method">
+                        <option value="car">Car</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="distance">Distance (km)</label>
+                    <input type="text" id="distance" value="1400">
+                </div>
+                <button class="btn btn-primary full-width">Calculate Carbon Footprint</button>
+            </div>
+            <div class="impact-widget">
+                <h3>Environmental Impact</h3>
+                <div class="impact-main">
+                    <p class="value">294.00 kg</p>
+                    <p class="label">CO₂ Emissions</p>
+                </div>
+                <div class="impact-details">
+                    <div class="detail-item">
+                        <p>Distance</p>
+                        <p>1400 km</p>
+                    </div>
+                    <div class="detail-item">
+                        <p>Emission Factor</p>
+                        <p>0.21 kg CO₂/km</p>
+                    </div>
+                    <div class="detail-item">
+                        <p>To Offset</p>
+                        <p>14 trees for 1 year</p>
+                    </div>
+                </div>
+                <div class="eco-tips">
+                    <h4>Eco Tips</h4>
+                    <ul>
+                        <li>Consider train travel for shorter distances</li>
+                        <li>Combine multiple trips to reduce frequency</li>
+                        <li>Look for carbon offset programs</li>
+                        <li>Choose eco-friendly accommodations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map-section">
+            <h2>Environmental Map</h2>
+            <p>Explore real-time air quality data and environmental conditions around the world</p>
+            <div class="map-widget">
+                <h3>Setup Mapbox</h3>
+                <p>Enter your Mapbox public token to enable the interactive map</p>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Mapbox public token">
+                </div>
+                <button class="btn btn-primary">Save Token & Load Map</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
