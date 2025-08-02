@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aqiStatus = document.querySelector('.aqi-status');
   const progressBar = document.querySelector('.progress');
 
-  const API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // 🔑 Replace with your real API key
+  const API_KEY = 'e6b123abc567de890fgh456ijklm789n'; // 🔑 Replace with your real API key
 
   if (locationBtn && locationText) {
     locationBtn.addEventListener('click', () => {
