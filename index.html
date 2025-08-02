@@ -64,28 +64,45 @@
       </div>
     </section>
 
-    <!-- AIR QUALITY -->
-    <section id="air-quality" class="air-quality-section">
-      <h2>Air Quality Monitor</h2>
-      <p>Plan your travel with real-time environmental data.</p>
-      <div class="air-quality-widget">
-        <div class="aqi-main">
-          <p>AQI</p>
-          <div class="aqi-value good">42</div>
-          <p class="aqi-status">Good</p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 42%;"></div>
-          </div>
-          <p class="location">📍 Current Location</p>
-        </div>
-        <div class="aqi-details">
-          <div class="detail-item"><p>PM2.5</p><p class="value">15 µg/m³</p></div>
-          <div class="detail-item"><p>PM10</p><p class="value">28 µg/m³</p></div>
-          <div class="detail-item"><p>Humidity</p><p class="value">65%</p></div>
-          <div class="detail-item"><p>Temperature</p><p class="value">22°C</p></div>
-        </div>
+   <section id="air-quality" class="air-quality-section">
+  <h2>Air Quality Monitor</h2>
+  <p>Plan your travel with real-time environmental data.</p>
+
+  <!-- Location Button & Output -->
+  <button id="get-location" class="btn btn-secondary">📍 Share My Location</button>
+  <p class="location" id="user-location">Waiting for location permission...</p>
+
+  <div class="air-quality-widget">
+    <div class="aqi-main">
+      <p>Air Quality Index</p>
+      <div class="aqi-value good">42</div>
+      <p class="aqi-status">Good</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 42%;"></div>
       </div>
-    </section>
+    </div>
+
+    <div class="aqi-details">
+      <div class="detail-item">
+        <p>PM2.5</p>
+        <p class="value">15 µg/m³</p>
+      </div>
+      <div class="detail-item">
+        <p>PM10</p>
+        <p class="value">28 µg/m³</p>
+      </div>
+      <div class="detail-item">
+        <p>Humidity</p>
+        <p class="value">65%</p>
+      </div>
+      <div class="detail-item">
+        <p>Temperature</p>
+        <p class="value">22°C</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- CARBON CALCULATOR -->
     <section id="carbon-calculator" class="carbon-calculator-section">
