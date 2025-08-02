@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const aqiStatus = document.querySelector('.aqi-status');
   const progressBar = document.querySelector('.progress');
 
-  const API_KEY = 'e6b123abc567de890fgh456ijklm789n'; // 🔑 Replace with your real API key
+ const API_KEY = '383c9d23fc6ba89237c1b34e243c6518';
+ // 🔑 Replace with your real API key
 
   if (locationBtn && locationText) {
     locationBtn.addEventListener('click', () => {
