@@ -14,7 +14,6 @@
       --radius: 16px;
       --shadow: 0 8px 32px rgba(0,0,0,.25);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { min-height: 100vh; font-family: Inter, system-ui; }
     body {
@@ -73,7 +72,6 @@
       font-weight: 600; cursor: pointer; transition: .3s;
     }
     .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
-
     .result { margin-top: 1rem; font-size: 1.25rem; font-weight: 600; }
 
     .chat-container { display: flex; flex-direction: column; height: 400px; }
@@ -180,9 +178,99 @@
 <!-- Scripts -->
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
-// ✅ Carbon Calculator
 const factors = { car: 0.17, bus: 0.089, train: 0.041, plane: 0.255 };
 function calcCO2() {
   const mode = document.getElementById('transport').value;
   const km = +document.getElementById('distance').value;
-  const co2 =
+  const co2 = (factors[mode] * km).toFixed(2);
+  const trees = Math.ceil(co2 / 21);
+  document.getElementById('co2-result').textContent = `${co2} kg CO₂ ≈ plant ${trees} tree${trees > 1 ? 's' : ''}.`;
+}
+
+const API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // 🔑 Replace with your OpenWeather API key
+
+function askLocation() {
+  document.getElementById('aqi-result').textContent = '📡 Getting your location...';
+  navigator.geolocation.getCurrentPosition(
+    pos => fetchAQIData(pos.coords.latitude, pos.coords.longitude),
+    () => {
+      document.getElementById('aqi-result').textContent = '❌ Location access denied.';
+    }
+  );
+}
+
+function fetchAQIData(lat, lon) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const loc = data.name || 'Unknown';
+      const temp = data.main.temp + '°C';
+      const humidity = data.main.humidity + '%';
+      const desc = data.weather[0].description;
+      const link = `https://www.google.com/maps?q=${lat},${lon}`;
+
+      document.getElementById('aqi-result').innerHTML = `
+        <strong>📍 <a href="${link}" target="_blank" style="color:#a3f7bf;text-decoration:underline;">${loc}</a></strong><br>
+        🌡️ Temp: ${temp}<br>
+        💧 Humidity: ${humidity}<br>
+        ☁️ Weather: ${desc}<br>
+      `;
+    })
+    .catch(() => {
+      document.getElementById('aqi-result').textContent = '❌ Failed to fetch air quality data.';
+    });
+}
+
+function loadMap() {
+  const token = document.getElementById('mb-token').value.trim();
+  if (!token) {
+    alert('Token required'); return;
+  }
+  mapboxgl.accessToken = token;
+  const mapDiv = document.getElementById('map');
+  mapDiv.style.height = '400px';
+  new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [0, 0],
+    zoom: 2
+  });
+}
+
+const presetAnswers = {
+  when: "Early mornings (6–8 AM) and late evenings (after 7 PM) usually have cleaner air.",
+  reduce: "Use public transport, fly economy, and offset your emissions by planting trees.",
+  offset: "One tree offsets ≈ 21 kg CO₂/year. Divide your trip’s CO₂ by 21.",
+  transport: "Train < Bus < Car < Plane in terms of carbon footprint.",
+  aqi: "Your AQI is shown above. Above 100? Avoid outdoor activities.",
+  tips: "1) Pack light, 2) Use refillable bottles, 3) Stay in eco-certified hotels."
+};
+
+function sendPreset(val) {
+  if (!val) return;
+  addMessage(document.querySelector(`#chat-select option[value="${val}"]`).text, 'user');
+  addMessage(presetAnswers[val], 'bot');
+}
+
+function sendMsg() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  addMessage(text, 'user');
+  input.value = '';
+  const reply = presetAnswers[text.toLowerCase()] ||
+    "I’m a simple assistant – select a question from the dropdown or type: 'tips', 'aqi', etc.";
+  setTimeout(() => addMessage(reply, 'bot'), 500);
+}
+
+function addMessage(text, sender) {
+  const box = document.getElementById('chat-box');
+  box.insertAdjacentHTML('beforeend',
+    `<div class="chat-message ${sender}">${text}</div>`);
+  box.scrollTop = box.scrollHeight;
+}
+</script>
+</body>
+</html>
