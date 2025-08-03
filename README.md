@@ -16,6 +16,7 @@
 
 ---
 
+
 ## 🚀 Overview
 
 **Eco Travel Mate** is an AI-powered travel app that promotes eco-friendly commuting. It detects your travel modes, tracks emissions, and encourages greener choices through gamification and real-time insights.
@@ -32,7 +33,7 @@
 - [📱 UI Screenshots](#-ui-screenshots)
 - [📸 Extended Features](#-extended-features)
 - [🧪 Getting Started](#-getting-started)
-- [👥 Team](#-team-members)
+- [👥 Team](#-team)
 - [🚧 Future Improvements](#-future-improvements)
 - [📘 License](#-license)
 
@@ -97,7 +98,7 @@ Users lack **real-time nudges** and **personalized feedback** to change their ha
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/alwinjosegeorge/Eco-Travel-Mate.git
+git clone https://github.com/JoeMartinRince/Eco-Travel-Mate.git
 cd Eco-Travel-Mate
 
 # 2️⃣ Install Flutter dependencies
