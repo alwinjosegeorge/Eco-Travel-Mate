@@ -93,13 +93,17 @@ People often lack **awareness** and **real-time nudges** to switch to greener tr
 
 ---
 
+
+---
+
 ## 👥 Team Members
 
 | Name                  | GitHub Profile                                      |
 |-----------------------|-----------------------------------------------------|
-| 💻 Febin Nobel        | [@febin-04](https://github.com/febin-04)                |
-| 🎯 Joe Martin Rince   | [@JoeMartinRince](https://github.com/JoeMartinRince)    |
-| 🧠 Christwin S Jose   | [@Christwin-Soy-Jose](https://github.com/Christwin-Soy-Jose) |
+| 🎯 Alwin Jose George  | [@alwinjosegeorge](https://github.com/alwinjosegeorge)  |
+| 🌐 Febin Nobel        | [@febin-04](https://github.com/febin-04)                |
+| 🧠 Joe Martin Rince   | [@JoeMartinRince](https://github.com/JoeMartinRince)    |
+| 💻 Christwin S Jose   | [@Christwin-Soy-Jose](https://github.com/Christwin-Soy-Jose) |
 
 ---
 
@@ -121,7 +125,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🌟 Give us a Star!
 
 If you liked the project, show your support by ⭐ starring the repo!
-
 
 
 ## 🧪 Getting Started
