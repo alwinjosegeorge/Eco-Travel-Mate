@@ -4,8 +4,8 @@
   <br />
   <em>Smarter routes, lower emissions, better habits 💚</em>  
   <br /><br />
-  <a href="https://alwinjosegeorge.github.io/eco-travel-mate/"><img src="https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=google-chrome" /></a>
-  <a href="https://alwinjosegeorge.github.io/eco-travel-mate/"><img src="https://img.shields.io/github/stars/JoeMartinRince/Eco-?style=for-the-badge&logo=github" /></a>
+  <a href="https://alwinjosegeorge.github.io/Eco-Travel-Mate/"><img src="https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=google-chrome" /></a>
+  <a href="https://alwinjosegeorge.github.io/Eco-Travel-Mate/"><img src="https://img.shields.io/github/stars/JoeMartinRince/Eco-?style=for-the-badge&logo=github" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Hackathon-Green%20Spark%202025-orange?style=for-the-badge" /></a>
 </p>
 
