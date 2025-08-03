@@ -1,111 +1,112 @@
 <h1 align="center">🌿 Eco Travel Mate</h1>
 <p align="center">
   <b>AI-Powered Sustainable Travel Companion</b><br/>
-  <em>Smarter routes, lower emissions, better habits 💚</em><br/><br/>
+  <em>Smarter routes. Lower emissions. Greener habits. 💚</em><br/><br/>
   
   <a href="https://alwinjosegeorge.github.io/Eco-Travel-Mate/">
-    <img src="https://img.shields.io/badge/🚀 Live Demo-green?style=for-the-badge&logo=google-chrome" alt="Live Demo"/>
+    <img src="https://img.shields.io/badge/🚀 Live Demo-00c853?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Demo"/>
   </a>
   <a href="https://github.com/alwinjosegeorge/Eco-Travel-Mate">
-    <img src="https://img.shields.io/github/stars/alwinjosegeorge/Eco-Travel-Mate?style=for-the-badge&logo=github" alt="GitHub Stars"/>
+    <img src="https://img.shields.io/github/stars/alwinjosegeorge/Eco-Travel-Mate?style=for-the-badge&logo=github&color=24292f" alt="GitHub Stars"/>
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/🏁 Hackathon-Green%20Spark%202025-orange?style=for-the-badge" alt="Hackathon Badge"/>
+    <img src="https://img.shields.io/badge/🏆 Green%20Spark%202025-Hackathon-orange?style=for-the-badge" alt="Hackathon Badge"/>
   </a>
 </p>
 
 ---
 
-## 🚀 Overview
+## 🧭 Overview
 
-**Eco Travel Mate** is an AI-powered travel app that promotes eco-friendly commuting. It detects your travel modes, tracks emissions, and encourages greener choices through gamification and real-time insights.
+**Eco Travel Mate** is an innovative mobile app that empowers individuals and families to adopt sustainable commuting habits. It uses AI to detect your travel mode, estimate emissions, and gamifies eco-behavior through points, challenges, and leaderboards.
 
-> 🏆 Built in 48 hours for **Green Spark Hackathon 2025**
+> 🛠 Built in 48 hours during the **Green Spark Hackathon 2025**
 
 ---
 
-## 🧭 Table of Contents
+## 🧩 Table of Contents
 
 - [🎯 Problem Statement](#-problem-statement)
-- [🌱 Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📱 UI Screenshots](#-ui-screenshots)
-- [📸 Extended Features](#-extended-features)
+- [🌱 Key Features](#-key-features)
+- [💻 Tech Stack](#-tech-stack)
+- [📱 UI Snapshots](#-ui-snapshots)
+- [📸 Extended Modules](#-extended-modules)
 - [🧪 Getting Started](#-getting-started)
-- [👥 Team](#-team-members)
-- [🚧 Future Improvements](#-future-improvements)
+- [👨‍👩‍👧‍👦 Team Members](#-team-members)
+- [🚧 Roadmap & Improvements](#-roadmap--improvements)
 - [📘 License](#-license)
 
 ---
 
 ## 🎯 Problem Statement
 
-🚗 Short-distance car travel contributes heavily to:
-- 🌍 Carbon emissions  
-- 🧍‍♂️ Sedentary lifestyle issues
+🚗 Everyday short-distance car travel leads to:
+- 🌍 Significant carbon emissions  
+- 🧍‍♂️ Lifestyle-related health problems
 
-Users lack **real-time nudges** and **personalized feedback** to change their habits. Eco Travel Mate addresses this.
-
----
-
-## 🌱 Features
-
-| Feature                         | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| 🚶 **Travel Detection**          | Auto-detects walking, cycling, driving, transit                             |
-| ♻️ **CO₂ Calculator**           | Real-time carbon + health impact calculator                                 |
-| 🌿 **Eco Suggestions**          | Greener travel alternatives with insights                                   |
-| 🎮 **GreenPoints & Challenges** | Gamified eco-travel experience                                              |
-| 👨‍👩‍👧‍👦 **Family Leaderboards** | Group collaboration & friendly competitions                                 |
+People rarely receive **real-time eco nudges** or have tools to **track and improve** their travel behavior.  
+**Eco Travel Mate bridges this gap**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🌱 Key Features
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-ffca28?style=flat-square&logo=firebase&logoColor=black)
-![Flask](https://img.shields.io/badge/Flask-000?style=flat-square&logo=flask)
-![Google Maps](https://img.shields.io/badge/Google%20Maps-4285F4?style=flat-square&logo=googlemaps&logoColor=white)
-![Mapbox](https://img.shields.io/badge/Mapbox-000000?style=flat-square&logo=mapbox)
-
----
-
-## 📱 UI Screenshots
-
-| Feature        | Description                        | Preview                                 |
-|----------------|------------------------------------|------------------------------------------|
-| 🏠 Home         | GreenScore, trip summary, tips     | ![](Photos/home_screen.png)              |
-| 📊 Trip Log     | CO₂ impact of past trips           | ![](Photos/trip_log.png)                 |
-| 💡 Suggestions  | Greener travel options             | ![](Photos/suggestion.png)               |
-| 🏆 Leaderboard  | Eco competition with friends       | ![](Photos/leaderboard.png)              |
+| 🚀 Feature                     | 💡 Description                                                                 |
+|-------------------------------|----------------------------------------------------------------------------------|
+| 🛰️ **Travel Mode Detection**  | Auto-detects walking, cycling, driving, and public transit                      |
+| ♻️ **CO₂ + Health Tracker**   | Calculates emissions, calories burned, and eco-savings                          |
+| 🌿 **Smart Suggestions**      | Offers greener route choices based on behavior and distance                     |
+| 🎮 **GreenPoints Gamification**| Weekly challenges + point-based leaderboard                                     |
+| 👨‍👩‍👧‍👦 **Family Mode**         | Track, compare, and collaborate with family or friend groups                   |
 
 ---
 
-## 📸 Extended Features
+## 💻 Tech Stack
 
-| Feature                    | Description                                     | Preview                                 |
-|----------------------------|-------------------------------------------------|------------------------------------------|
-| 🤖 AI Travel Assistant      | Chatbot for eco-route guidance + FAQs          | ![](Photos/ai_assistant.jpeg)            |
-| 💨 Air Quality Monitor      | Live AQI + weather based on user location       | ![](Photos/air_quality.jpeg)             |
-| 🧮 Carbon Input Calculator  | Manual CO₂ entry and emission tracking         | ![](Photos/carbon_input.jpeg)            |
-| 📈 CO₂ Analytics Dashboard  | Graphical breakdown of carbon output           | ![](Photos/carbon_result.jpeg)           |
+| Frontend      | Backend      | APIs / SDKs       | Database      |
+|---------------|--------------|-------------------|---------------|
+| Flutter       | Flask        | Google Maps API   | Firebase      |
+| Dart          | Python       | Mapbox API        | Firestore     |
+
+> 🧠 Leveraging real-time geolocation, behavior AI, and gamification logic.
+
+---
+
+## 📱 UI Snapshots
+
+| Screen        | Preview                                |
+|---------------|-----------------------------------------|
+| 🏠 Home        | ![](Photos/home_screen.png)             |
+| 📊 Trip Log    | ![](Photos/trip_log.png)                |
+| 💡 Suggestions | ![](Photos/suggestion.png)              |
+| 🏆 Leaderboard | ![](Photos/leaderboard.png)             |
+
+---
+
+## 📸 Extended Modules
+
+| Module                     | Description                                      | Preview                                |
+|----------------------------|--------------------------------------------------|----------------------------------------|
+| 🤖 AI Travel Assistant     | Chatbot for travel help, eco-tips, route queries | ![](Photos/ai_assistant.jpeg)          |
+| 💨 Air Quality Monitor     | Real-time AQI + weather from location services   | ![](Photos/air_quality.jpeg)           |
+| 🔢 Manual CO₂ Input        | Let users manually log emission sources          | ![](Photos/carbon_input.jpeg)          |
+| 📈 Carbon Analytics        | Graphical breakdown of personal CO₂ emissions    | ![](Photos/carbon_result.jpeg)         |
 
 ---
 
 ## 🧪 Getting Started
 
 ```bash
-# 1️⃣ Clone the repository
+# Clone the repository
 git clone https://github.com/alwinjosegeorge/Eco-Travel-Mate.git
 cd Eco-Travel-Mate
 
-# 2️⃣ Install Flutter dependencies
+# Install dependencies
 flutter pub get
 
-# 3️⃣ Firebase Setup
-#    - Add google-services.json (Android)
-#    - Add GoogleService-Info.plist (iOS)
+# Firebase configuration
+# └── Add `google-services.json` (Android)
+# └── Add `GoogleService-Info.plist` (iOS)
 
-# 4️⃣ Run the app
+# Run the app
 flutter run
