@@ -100,10 +100,10 @@ People often lack **awareness** and **real-time nudges** to switch to greener tr
 
 | Name                  | GitHub Profile                                      |
 |-----------------------|-----------------------------------------------------|
-| 🎯 Alwin Jose George  | [@alwinjosegeorge](https://github.com/alwinjosegeorge)  |
 | 🌐 Febin Nobel        | [@febin-04](https://github.com/febin-04)                |
 | 🧠 Joe Martin Rince   | [@JoeMartinRince](https://github.com/JoeMartinRince)    |
 | 💻 Christwin S Jose   | [@Christwin-Soy-Jose](https://github.com/Christwin-Soy-Jose) |
+| 🎯 Alwin Jose George  | [@alwinjosegeorge](https://github.com/alwinjosegeorge)  |
 
 ---
 
