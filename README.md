@@ -14,7 +14,6 @@ Eco Travel Mate is a smart mobility and eco-awareness web app designed to **help
 It tracks trips, monitors air quality, calculates carbon footprints, and provides AI-driven environmental insights.  
 
 ---
-
 ## 🚀 Features  
 
 - 📍 **Share Your Location** – Auto-detect location and fetch real-time environmental data.  
