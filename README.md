@@ -50,9 +50,3 @@ It tracks trips, monitors air quality, calculates carbon footprints, and provide
 | 💻 **Christwin S Jose** | [@Christwin-Soy-Jose](https://github.com/Christwin-Soy-Jose) |
 
 ---
-
-## ⚡ Getting Started  
-
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/alwinjosegeorge/Eco-Travel-Mate.git
