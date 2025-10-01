@@ -3,7 +3,7 @@
   <b>AI-Powered Sustainable Travel Companion</b><br/>
   <em>Smarter routes, lower emissions, better habits 💚</em><br/><br/>
   
-  <a href="https://alwinjosegeorge.github.io/Eco-Travel-Mate/">
+  <a href="https://eco-travel-mate.vercel.app/">
     <img src="https://img.shields.io/badge/🚀 Live Demo-green?style=for-the-badge&logo=google-chrome" alt="Live Demo"/>
   </a>
   <a href="https://eco-travel-mate.vercel.app/">
