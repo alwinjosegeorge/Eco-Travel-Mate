@@ -1,5 +1,4 @@
-<h1 align="center">🌍 Eco Travel Mate</h1>
-<p align="center">
+<h1 align="center">🌍 Eco Travel Mate</h1><p align="center">
   <a href="https://eco-travel-mate.vercel.app/" target="_blank">
     <img src="Photos/live.png" alt="Live Demo" width="600"/>
   </a>
