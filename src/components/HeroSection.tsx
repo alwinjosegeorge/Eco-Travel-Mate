@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-eco-travel.jpg";
 import { useUserLocation } from "@/hooks/useUserLocation";
 
 export const HeroSection = () => {
-  const { requestLocation, latitude } = useUserLocation();
+  const { requestLocation, latitude, fullAddress } = useUserLocation();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
@@ -39,6 +39,13 @@ export const HeroSection = () => {
           Your intelligent eco-travel companion. Track carbon footprint, monitor air quality, 
           and get AI-powered insights for sustainable journeys.
         </p>
+        
+        {latitude && fullAddress && (
+          <div className="mb-6 flex items-center justify-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30 max-w-3xl mx-auto">
+            <MapPin className="w-5 h-5 text-white flex-shrink-0" />
+            <span className="text-white text-base md:text-lg font-medium">{fullAddress}</span>
+          </div>
+        )}
         
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Button 
