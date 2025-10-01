@@ -6,7 +6,7 @@
   <a href="https://alwinjosegeorge.github.io/Eco-Travel-Mate/">
     <img src="https://img.shields.io/badge/🚀 Live Demo-green?style=for-the-badge&logo=google-chrome" alt="Live Demo"/>
   </a>
-  <a href="https://github.com/alwinjosegeorge/Eco-Travel-Mate">
+  <a href="https://eco-travel-mate.vercel.app/">
     <img src="https://img.shields.io/github/stars/alwinjosegeorge/Eco-Travel-Mate?style=for-the-badge&logo=github" alt="GitHub Stars"/>
   </a>
   <a href="#">
